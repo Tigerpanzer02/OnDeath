@@ -110,7 +110,7 @@ Death:
     - '&e--------- &7[&aUPDATE &7| &bOnDeath&7]&e ---------'
     - '&c|  New Update is avaible! You can'
     - '&c|  download at SpigotMC!'
-    - '&c|  https://www.spigotmc.org/resources/56907/'
+    - '&c|  https://www.spigotmc.org/resources/63773/'
     - '&e--------- &7[&aUPDATE &7| &bOnDeath&7]&e ---------'
   DeathMessage: '&7%player% has Deathed the Server'
 

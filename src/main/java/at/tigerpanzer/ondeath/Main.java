@@ -50,7 +50,7 @@ public class Main extends JavaPlugin {
       mySQLEnabled = true;
     }
     if (getConfig().getBoolean("Death.UpdateMessageOn", true)) {
-      //update();
+      update();
     }
     if (getConfig().getBoolean("FirstDeath.Enabled", false)) {
       firstDeathEnabled = true;
@@ -91,7 +91,7 @@ public class Main extends JavaPlugin {
   }
 
   private void update() {
-    UpdateChecker.init(this, 0).requestUpdateCheck().whenComplete((result, exception) -> {
+    UpdateChecker.init(this, 63773).requestUpdateCheck().whenComplete((result, exception) -> {
       if (result.requiresUpdate()) {
         if (result.getNewestVersion().contains("b")) {
           if (getConfig().getBoolean("Update-Notifier.Notify-Beta-Versions", true)) {

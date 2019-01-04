@@ -1,0 +1,8 @@
+name: OnDeath
+author: Tigerpanzer (SpigotMC Tigerkatze) [CC-SW Network]
+main: at.tigerpanzer.ondeath.Main
+version: ${project.version}
+description: With this plugin, deaths are unique on your server
+softdepend: [PlaceholderAPI]
+commands:
+  onjoin:  

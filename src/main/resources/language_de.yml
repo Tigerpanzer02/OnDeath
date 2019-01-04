@@ -1,0 +1,137 @@
+##########################
+##        General       ##
+##########################
+
+
+#All Consolen-Messages
+Console:
+  PrefixConsole: '&7[&bOnDeath&7]'
+
+
+#Messages - Command OnDeath
+Help:
+  HelpText:
+    - ''
+    - '&e--------- &7[&aHELP &7| &bOnDeath&7]&e ---------'
+    - '&e|  '
+    - '&e|  &7/&bOnDeath'
+    - '&e|    &c->  &7Overview'
+    - '&e|  '
+    - '&e|  &7/&bOnDeath &areloadconfig'
+    - '&e|    &c->  &7Reload your config'
+    - '&e|  '
+    - '&e|  &7/&bOnDeath &asetspawn'
+    - '&e|    &c->  &7Set the Spawnlocation'
+    - '&e|  '
+    - '&e|  &7/&bOnDeath &asetfirstspawn'
+    - '&e|    &c->  &7Set the Spawnlocation'
+    - '&e|  '
+    - '&e|  &7/&bOnDeath &alocale <de/default>'
+    - '&e|    &c->  &7Switch the locale'
+    - '&e|  '
+    - '&e--------- &7[&aHELP &7| &bOnDeath&7]&e ---------'
+    - ''
+  LanguageSwitch: 'Your Config is saved!'
+  OutConfigLoad: 'All settings from configuration loaded successfully!'
+
+
+#General Messages
+Prefix: '&7[&bOnDeath&7] &7»&e '
+Permissionfail: "&cYou don't have permission to do this!"
+TargetFalse: "&cPlayer is not online or doesn't exist"
+NoPlayer: 'Only players can do that!'
+
+
+########################
+##     First Death     ##
+########################
+
+
+FirstDeath:
+  #Titel in the middle of the screen
+  Title:
+    Title1: '&bCC&3SW'
+    SubTitle1: '&eFirstDeath'
+    SubTitle2: '&aTitle&8 - &7Editerie es in der &8language.yml'
+  #Welcome Message in the Chat
+  DeathMessageTextOn:
+    #You can add and remove as many lines as you like!
+    DeathMessageText:
+      - '&e------------------------------------'
+      - '&e|  '
+      - '&e|  Heey, &a%player%&7!'
+      - '&e|  &eWelcome to your Death!'
+      - '&e|  '
+      - '&e|  &bOnDeath &8- &7Your Death Plugin'
+      - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
+      - '&e|  &7Your Network @CC-SW'
+      - '&e|  '
+      - '&e------------------------------------'
+  #Setze die erste TodesNachricht
+  Death:
+    DeathMessage: '&7%player% has dieed the Server'
+  #Nacricht in der Actionbar
+  Actionbar:
+    Actionbar1: '&7Tod - %player%!'
+    Actionbar2: '&7 CC-SW Network'
+
+
+########################
+##    Normal Death     ##
+########################
+
+
+#Titel in the middle of the screen
+Title:
+  Title1: '&bCC&3SW'
+  SubTitle1: '&bOnDeath'
+  SubTitle2: '&aTitle&8 - &7Editere es in der &8language.yml'
+
+
+#Nachrichtenliste beim Tod
+DeathMessageTextOn:
+  #Du kannst beliebig Zeieln hinzufügen oder entfernen
+  DeathMessageText:
+    - '&e------------------------------------'
+    - '&e|  '
+    - '&e|  Heey, &a%player%&7!'
+    - '&e|  &eDu bist gestorben!'
+    - '&e|  '
+    - '&e|  &bOnDeath &8- &7Dein Death Plugin'
+    - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
+    - '&e|  &7Dein Netzwerk @CC-SW'
+    - '&e|  '
+    - '&e------------------------------------'
+
+
+#Nachrichten beim Tod
+Death:
+  UpdateMessageText:
+    - '&e--------- &7[&aUPDATE &7| &bOnDeath&7]&e ---------'
+    - '&c|  Neues Update verfügbar! Du kannst es auf'
+    - '&c|  SpigotMC herunterladen!'
+    - '&c|  https://www.spigotmc.org/resources/XXXXXXX/'
+    - '&e--------- &7[&aUPDATE &7| &bOnDeath&7]&e ---------'
+  DeathMessage: '&7%player% ist gestorben'
+
+
+#Nachrichten in der Actionbar
+Actionbar:
+  Actionbar1: '&7Tod - %player%!'
+  Actionbar2: '&7 CC-SW Network'
+
+#Nachrichten für Spielernachrichten
+SpawnLocation:
+  SetSpawnMessageSetTo: '&aSpawn set to&7: '
+  SetSpawnMessageYaw: '&2Yaw&7: '
+  SetSpawnMessagePitch: '&2Pitch&7: '
+
+
+##########################
+##     DON´T MODIFY     ##
+##########################
+
+
+# Don't edit it. But who's stopping you? It's your server!
+# Really, don't edit ;p
+File-Version-Do-Not-Edit: 1

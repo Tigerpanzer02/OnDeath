@@ -1,0 +1,194 @@
+########################
+##       ONDEATH       ##
+########################
+
+
+# Select locale of OnDeath, default it's English.
+# Available locales:
+#    default - English language. Uses 'language.yml'.
+#    de - Deutsch
+locale: default
+
+
+########################
+##        MySQL       ##
+########################
+
+
+#Do you want to use a MySQL database?
+MySQL:
+  Enabled: false
+  #Should the MySQL connection after 45 minutes reconnected?
+  AutoReconnect: false
+  Username: accountname
+  Password: password
+  Database: database
+  Host: localhost
+  Port: '3306'
+
+
+########################
+##     First Death     ##
+########################
+
+
+#Here you can enable FirstDeath stuff
+FirstDeath:
+  Enabled: false
+  #Titel in the middle of the screen
+  Title:
+    TitleOnDeath: true
+  #Death Message in the Chat
+  DeathMessageText:
+    DeathMessageTextOn: true
+  #Should there be a message to all players when a player die
+  Death:
+    #Should it sends a message to Player with the Permission
+    UpdateMessageOn: true
+    #Should the chat be cleaned up by the player at the death?
+    ChatClearOn: true
+    #Should the Player with Permission OnDeath.* or OnDeath.Firework have a Firework when he die?
+    FireworkOn: true
+    Firework:
+      InstantExplode: false
+      Amount: 3
+      FireworkHeight: 3
+      Power: 1
+      Type: BALL
+      Flicker: false
+      Trail: false
+      Colors:
+      - YELLOW
+      Fade:
+      - WHITE
+    DeathMessageOn: true
+    #Should there be a sound
+    DeathSoundOn: false
+    DeathSound: FIREWORK_LAUNCH
+  #Should the Player that die heal with costum entry
+  Heal:
+    HealOn: true
+    Health: 10
+    FoodLevel: 10
+    ClearPotionEffects: true
+    #Should the Player that Death with Permission heal
+    HealOnWithPermission: true
+    HealthWithPermission: 10
+    FoodLevelWithPermission: 10
+    ClearPotionEffectsWithPermission: true
+  #Execute Commands after Death
+  ExecuteCommand:
+    CommandOn: false
+    Commands:
+    - 'console;say %player% Hello! Change this in Config!'
+    - 'player;help'
+    - 'killer;help'
+    Respawn:
+      CommandOn: false
+      Commands:
+      - 'console;say %player% Hello! Change this in Config!'
+      - 'player;help'
+  #Message on the actionbar
+  Actionbar:
+    ActionbarOnDeath: true
+  #Should Players that die be teleported to a location
+  SpawnLocation:
+    SpawnLocationEnable: false
+    World: world
+    XCoord: 0
+    YCoord: 0
+    ZCoord: 0
+    Yaw: 0
+    Pitch: 0
+
+
+########################
+##    Normal Death     ##
+########################
+
+
+#Titel in the middle of the screen
+Title:
+  TitleOnDeath: true
+
+
+#Death Message in the Chat
+DeathMessageText:
+  DeathMessageTextOn: true
+
+Death:
+  #Should it sends a message to Player with the Permission
+  UpdateMessageOn: true
+  #Should the chat be cleaned up by the player at the death?
+  ChatClearOn: true
+  #Should the Player with Permission OnDeath.* or OnDeath.Firework have a Firework when he die?
+  FireworkOn: true
+  Firework:
+    InstantExplode: false
+    Amount: 3
+    FireworkHeight: 3
+    Power: 1
+    Type: BALL
+    Flicker: false
+    Trail: false
+    Colors:
+    - YELLOW
+    Fade:
+    - WHITE
+  DeathMessageOn: true
+  #Should there be a sound
+  DeathSoundOn: false
+  DeathSound: FIREWORK_LAUNCH
+
+
+#Should the Player that die heal with costum heal
+Heal:
+  HealOn: true
+  Health: 10
+  FoodLevel: 10
+  ClearPotionEffects: true
+#Should the Player that die with Permission costum heal
+  HealOnWithPermission: true
+  HealthWithPermission: 15
+  FoodLevelWithPermission: 15
+  ClearPotionEffectsWithPermission: true
+
+
+#Execute Commands after Death
+ExecuteCommand:
+  CommandOn: false
+  Commands:
+    - 'console;say %player% Hello! Change this in Config!'
+    - 'player;help'
+    - 'killer;help'
+  Respawn:
+    CommandOn: false
+    Commands:
+      - 'console;say %player% Hello! Change this in Config!'
+      - 'player;help'
+
+
+#Message on the actionbar
+Actionbar:
+  ActionbarOnDeath: true
+
+#Should Players that die be teleported to a location
+SpawnLocation:
+  SpawnLocationEnable: false
+  World: world
+  XCoord: 0
+  YCoord: 0
+  ZCoord: 0
+  Yaw: 0
+  Pitch: 0
+
+
+##########################
+##     DON´T MODIFY     ##
+##########################
+
+
+# Don't modify.
+Version: 1
+
+# No way! You've reached the end! Let us Death!?

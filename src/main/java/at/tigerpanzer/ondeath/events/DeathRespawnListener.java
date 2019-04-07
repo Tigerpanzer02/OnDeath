@@ -33,7 +33,7 @@ public class DeathRespawnListener implements Listener {
     Player p = e.getPlayer();
     Storage.DataOnJoin(p);
     if (plugin.needUpdateJoin()) {
-      if ((p.hasPermission("OnDeath.UpdateMessage")) || (p.hasPermission("OnDeath.*"))) {
+      if ((p.hasPermission("OnDeath.UpdateMessage"))) {
         if (plugin.getConfig().getBoolean("Death.UpdateMessageOn")) {
           List<String> UpdateMessageText = LanguageManager.getLanguageList("Death.UpdateMessageText");
           for (String msg : UpdateMessageText) {
@@ -80,7 +80,7 @@ public class DeathRespawnListener implements Listener {
       spawnlocationz = plugin.getConfig().getDouble("FirstDeath.SpawnLocation.ZCoord");
       spawnlocationyaw = plugin.getConfig().getInt("FirstDeath.SpawnLocation.Yaw");
       spawnlocationpitch = plugin.getConfig().getInt("FirstDeath.SpawnLocation.Pitch");
-      if ((p.hasPermission("FirstDeath.OnDeath.Heal"))) {
+      if ((p.hasPermission("OnDeath.FirstDeath.Heal"))) {
         if (plugin.getConfig().getBoolean("FirstDeath.Heal.HealOnWithPermission")) {
           p.setHealth(plugin.getConfig().getInt("FirstDeath.Heal.HealthWithPermission"));
           p.setFoodLevel(plugin.getConfig().getInt("FirstDeath.Heal.FoodLevelWithPermission"));

@@ -38,7 +38,7 @@ public class DeathFirework implements Listener {
     boolean fireworkinstantexplode;
     int fireworkpower;
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
-      if (!p.hasPermission("OnDeath.FirstDeath.Firework") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.FirstDeath.Firework")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("FirstDeath.Death.FireworkOn")) {
@@ -54,7 +54,7 @@ public class DeathFirework implements Listener {
       fireworkinstantexplode = plugin.getConfig().getBoolean("FirstDeath.Death.Firework.InstantExplode");
       fireworkpower = plugin.getConfig().getInt("FirstDeath.Death.Firework.Power");
     } else {
-      if (!p.hasPermission("OnDeath.Firework") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.Firework")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("Death.FireworkOn")) {

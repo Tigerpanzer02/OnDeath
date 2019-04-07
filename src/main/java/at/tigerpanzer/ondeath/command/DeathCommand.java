@@ -28,7 +28,7 @@ public class DeathCommand implements CommandExecutor {
       return true;
     }
     Player player = (Player) sender;
-    if (!player.hasPermission("OnDeath.config") || !player.hasPermission("OnDeath.*")) {
+    if (!player.hasPermission("OnDeath.config")) {
       player.sendMessage(Utils.setPlaceholders(player, Utils.colorMessage("Permissionfail")));
       return true;
     }

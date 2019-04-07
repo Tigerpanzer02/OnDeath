@@ -5,4 +5,19 @@ version: ${project.version}
 description: With this plugin, deaths are unique on your server
 softdepend: [PlaceholderAPI]
 commands:
-  onjoin:  
+  ondeath:
+
+permissions:
+  OnDeath.*:
+    description: Gives you all permissions for OnDeath
+    children:
+      OnDeath.Firework: true
+      OnDeath.config: true
+      OnDeath.UpdateMessage: true
+      OnDeath.ExecuteCommand: true
+      OnDeath.Heal: true
+      OnDeath.FirstDeath.Firework: true
+      OnDeath.FirstDeath.ExecuteCommand: true
+      OnDeath.FirstDeath.Heal: true
+      OnDeath.ExecuteCommand.Respawn: true
+      OnDeath.FirstDeath.ExecuteCommand.Respawn: true

@@ -28,7 +28,7 @@ public class DeathExecuteCommand implements Listener {
     Player k = e.getEntity().getKiller();
     List<String> commands;
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
-      if (!p.hasPermission("OnDeath.FirstDeath.ExecuteCommand") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.FirstDeath.ExecuteCommand")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("FirstDeath.ExecuteCommand.CommandOn")) {
@@ -36,7 +36,7 @@ public class DeathExecuteCommand implements Listener {
       }
       commands = plugin.getConfig().getStringList("FirstDeath.ExecuteCommand.Commands");
     } else {
-      if (!p.hasPermission("OnDeath.ExecuteCommand") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.ExecuteCommand")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("ExecuteCommand.CommandOn")) {
@@ -66,7 +66,7 @@ public class DeathExecuteCommand implements Listener {
     Player p = e.getPlayer();
     List<String> commands;
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
-      if (!p.hasPermission("OnDeath.FirstDeath.ExecuteCommand.Respawn") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.FirstDeath.ExecuteCommand.Respawn")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("FirstDeath.ExecuteCommand.Respawn.CommandOn")) {
@@ -74,7 +74,7 @@ public class DeathExecuteCommand implements Listener {
       }
       commands = plugin.getConfig().getStringList("FirstDeath.ExecuteCommand.Respawn.Commands");
     } else {
-      if (!p.hasPermission("OnDeath.ExecuteCommand.Respawn") || !p.hasPermission("OnDeath.*")) {
+      if (!p.hasPermission("OnDeath.ExecuteCommand.Respawn")) {
         return;
       }
       if (!plugin.getConfig().getBoolean("ExecuteCommand.Respawn.CommandOn")) {

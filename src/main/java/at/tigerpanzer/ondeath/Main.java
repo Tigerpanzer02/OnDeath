@@ -30,11 +30,6 @@ public class Main extends JavaPlugin {
 
   @Override
   public void onEnable() {
-    //check if using releases before 2.0.0
-    //if ((Utils.getConfig(this, "config").isSet("PlaceholderAPI") && Utils.getConfig(this, "config").isSet("Help.HelpText"))) {
-    //   LanguageMigrator.migrateToNewFormat();
-    //  usedbefore2 = true;
-    //}
     LanguageManager.init(this);
     saveDefaultConfig();
     LanguageMigrator.configUpdate();
@@ -56,10 +51,6 @@ public class Main extends JavaPlugin {
       firstDeathEnabled = true;
     }
     Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + " &7=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="));
-    //if (usedbefore2) {
-    //  MessageUtils.info();
-    //  Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + " &cWe detected that you have used a version before 2.0.0 before! Please have a look on the &dUpdateChanges"));
-    //}
     Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + " &cPlugin version: &e" + getDescription().getVersion()));
     Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + " &cPlugin author: &e" + getDescription().getAuthors()));
     Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + " &cPlugin status: &aaktiviert &c| &aenabled"));

@@ -57,6 +57,7 @@ public class DeathRespawnListener implements Listener {
   @EventHandler
   public void OnQuit(PlayerQuitEvent e) {
     if (plugin.mySQLEnabled()) {
+      Utils.debugmessage("Saved data to mysql for " + e.getPlayer().getName());
       Storage.DataOnQuit(e.getPlayer());
     }
   }
@@ -82,6 +83,7 @@ public class DeathRespawnListener implements Listener {
     boolean DeathMessageTextOn;
     List<String> DeathMessageText;
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
+      Utils.debugmessage("Loading first death for" + p.getName());
       chatclearon = plugin.getConfig().getBoolean("FirstDeath.Death.ChatClearOn");
       spawnlocationenable = plugin.getConfig().getBoolean("FirstDeath.SpawnLocation.SpawnLocationEnable");
       spawnlocationworld = plugin.getConfig().getString("FirstDeath.SpawnLocation.World");
@@ -115,6 +117,7 @@ public class DeathRespawnListener implements Listener {
       DeathMessageTextOn = plugin.getConfig().getBoolean("FirstDeath.WelcomeMessage.DeathMessageTextOn");
       DeathMessageText = LanguageManager.getLanguageList("FirstDeath.WelcomeMessage.DeathMessageText");
     } else {
+      Utils.debugmessage("Loading normal death for" + p.getName());
       chatclearon = plugin.getConfig().getBoolean("Death.ChatClearOn");
       spawnlocationenable = plugin.getConfig().getBoolean("SpawnLocation.SpawnLocationEnable");
       spawnlocationworld = plugin.getConfig().getString("SpawnLocation.World");
@@ -149,23 +152,28 @@ public class DeathRespawnListener implements Listener {
       DeathMessageText = LanguageManager.getLanguageList("WelcomeMessage.DeathMessageText");
     }
     if (chatclearon) {
+      Utils.debugmessage("ChatClear for " + p.getName());
       for (int i = 0; i < 200; i++) {
         p.sendMessage(" ");
       }
     }
     if (spawnlocationenable) {
+      Utils.debugmessage("Spawning for " + p.getName());
       final Location SpawnLocation = new Location(Bukkit.getServer().getWorld(spawnlocationworld), spawnlocationx, spawnlocationy, spawnlocationz, (float) spawnlocationyaw, (float) spawnlocationpitch);
       p.teleport(SpawnLocation);
     }
     Bukkit.getScheduler().runTaskLater(plugin, () -> {
       if (titleOnDeath) {
+        Utils.debugmessage("Title for " + p.getName());
         Utils.sendTitle(p, Utils.setPlaceholders(p, title1), 25, 90, 0);
         Utils.sendSubTitle(p, Utils.setPlaceholders(p, subtitle1), 25, 90, 0);
 
         if (actionbarOnDeath) {
+          Utils.debugmessage("Actionbar for " + p.getName());
           Utils.sendActionBar(p, Utils.setPlaceholders(p, actionbar1));
         }
         if (DeathMessageTextOn) {
+          Utils.debugmessage("Message for " + p.getName());
           for (String msg : DeathMessageText) {
             p.sendMessage(Utils.setPlaceholders(e.getPlayer(), msg));
           }
@@ -175,9 +183,11 @@ public class DeathRespawnListener implements Listener {
 
     Bukkit.getScheduler().runTaskLater(plugin, () -> {
       if (titleOnDeath) {
+        Utils.debugmessage("Title 2 for " + p.getName());
         Utils.sendSubTitle(p, Utils.setPlaceholders(p, subtitle2), 0, 90, 0);
       }
       if (actionbarOnDeath) {
+        Utils.debugmessage("Actionbar 2 for " + p.getName());
         Utils.sendActionBar(p, Utils.setPlaceholders(p, actionbar2));
       }
     }, 65L);
@@ -194,7 +204,7 @@ public class DeathRespawnListener implements Listener {
   }
 
   @EventHandler
-  public void onQuit(PlayerDeathEvent e) {
+  public void onDeath(PlayerDeathEvent e) {
     Player p = e.getEntity().getPlayer();
     boolean Deathsoundon;
     String Deathsound;
@@ -213,9 +223,11 @@ public class DeathRespawnListener implements Listener {
       Deathmessage = Utils.colorMessage("Death.DeathMessage");
     }
     if (Deathsoundon) {
+      Utils.debugmessage("Send Sound to " + p.getName());
       p.playSound(p.getLocation(), Sound.valueOf(Deathsound), 3, 1);
     }
     if (Deathmessageon) {
+      Utils.debugmessage("Send quitmessage to " + p.getName());
       e.setDeathMessage(Utils.setPlaceholders(p, Deathmessage));
     } else {
       e.setDeathMessage("");

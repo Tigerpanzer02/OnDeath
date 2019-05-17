@@ -54,19 +54,23 @@ public class DeathExecuteCommand implements Listener {
       }
       commands = plugin.getConfig().getStringList("ExecuteCommand.Commands");
     }
+    Utils.debugmessage("[D] Trying to execute commands" + commands);
     for (String command : commands) {
       String[] parts = command.split(";");
       String sender = parts[0];
       String cmd = Utils.setPlaceholders(p, parts[1]);
       switch (sender) {
         case "console":
+          Utils.debugmessage("[D] Executed console command" + cmd);
           Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
         case "killer":
           k.performCommand(cmd);
+          Utils.debugmessage("[D] Executed killer (" + k.getName() + ") command" + cmd);
         case "player":
           p.performCommand(cmd);
+          Utils.debugmessage("[D] Executed player (" + p.getName() + ") command" + cmd);
         default:
-          System.out.println("Error ExecuteCommand 01 | You can only use killer, player or console as sender!");
+          System.out.println("[D] Error ExecuteCommand 01 | You can only use killer, player or console as sender!");
       }
     }
   }
@@ -92,6 +96,7 @@ public class DeathExecuteCommand implements Listener {
       }
       commands = plugin.getConfig().getStringList("ExecuteCommand.Respawn.Commands");
     }
+    Utils.debugmessage("[R] Trying to execute commands" + commands);
     for (String command : commands) {
       String[] parts = command.split(";");
       String sender = parts[0];
@@ -99,10 +104,12 @@ public class DeathExecuteCommand implements Listener {
       switch (sender) {
         case "console":
           Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
+          Utils.debugmessage("[R] Executed console command" + cmd);
         case "player":
           p.performCommand(cmd);
+          Utils.debugmessage("[R] Executed player (" + p.getName() + ") command" + cmd);
         default:
-          System.out.println("Error ExecuteCommand 02 | You can only use player or console as sender!");
+          System.out.println("[R] Error ExecuteCommand 02 | You can only use player or console as sender!");
       }
     }
   }

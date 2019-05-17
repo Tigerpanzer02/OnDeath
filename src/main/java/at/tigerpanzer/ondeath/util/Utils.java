@@ -121,6 +121,13 @@ public class Utils {
     }
   }
 
+  public static void debugmessage(String message) {
+    if (plugin.getConfig().getBoolean("debug")) {
+      String consolePrefix = "[OnDeath | Debug] ";
+      Bukkit.getConsoleSender().sendMessage(Utils.color(consolePrefix + message));
+    }
+  }
+
   public static String setPlaceholders(final Player p, String str) {
     String formatted = str;
     if (plugin.isPlaceholderAPIEnabled()) {

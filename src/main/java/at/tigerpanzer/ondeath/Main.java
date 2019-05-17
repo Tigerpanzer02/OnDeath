@@ -128,7 +128,7 @@ public class Main extends JavaPlugin {
         if (mySQLEnabled) {
           mysql.Reconnect();
         }
-      }, 20L * 2700, 20L * 2700);
+      }, ((20L * 60) * getConfig().getInt("MySQL.AutoReconnect.ReconnectCoolDown")), ((20L * 60) * getConfig().getInt("MySQL.AutoReconnect.ReconnectCoolDown")));
     }
   }
 

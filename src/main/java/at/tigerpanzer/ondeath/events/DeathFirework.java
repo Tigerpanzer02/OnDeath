@@ -25,6 +25,7 @@ import org.bukkit.inventory.meta.FireworkMeta;
 
 import at.tigerpanzer.ondeath.Main;
 import at.tigerpanzer.ondeath.util.Storage;
+import at.tigerpanzer.ondeath.util.Utils;
 
 public class DeathFirework implements Listener {
 
@@ -48,6 +49,7 @@ public class DeathFirework implements Listener {
     boolean fireworkinstantexplode;
     int fireworkpower;
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
+      Utils.debugmessage("Loading First firework for " + p.getName());
       if (!p.hasPermission("OnDeath.FirstDeath.Firework")) {
         return;
       }
@@ -64,6 +66,7 @@ public class DeathFirework implements Listener {
       fireworkinstantexplode = plugin.getConfig().getBoolean("FirstDeath.Death.Firework.InstantExplode");
       fireworkpower = plugin.getConfig().getInt("FirstDeath.Death.Firework.Power");
     } else {
+      Utils.debugmessage("Loading normal firework for " + p.getName());
       if (!p.hasPermission("OnDeath.Firework")) {
         return;
       }
@@ -81,6 +84,7 @@ public class DeathFirework implements Listener {
       fireworkpower = plugin.getConfig().getInt("Death.Firework.Power");
     }
     for (int i = 1; i < fireworkamount; i++) {
+      Utils.debugmessage("Execute Firework " + p.getName());
       List<Color> colors = new ArrayList<>();
       List<Color> fade = new ArrayList<>();
       for (String l : lore) {
@@ -101,6 +105,7 @@ public class DeathFirework implements Listener {
       if (fireworkinstantexplode) {
         Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(plugin, f::detonate, 1L);
       }
+      Utils.debugmessage("Firework launched on " + p.getName());
     }
   }
 

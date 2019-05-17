@@ -1,4 +1,14 @@
 /*
+ * OnDeath - Your Server Death Plugin
+ *
+ *      With this plugin, deaths are
+ *      unique on your server
+ *
+ *
+ *    Maintained by Tigerpanzer_02
+ */
+
+/*
  *  OnJoin 2 - Powerful join system
  *  Maintained by Tigerpanzer_02
  */

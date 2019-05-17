@@ -1,4 +1,14 @@
 
+/*
+ * OnDeath - Your Server Death Plugin
+ *
+ *      With this plugin, deaths are
+ *      unique on your server
+ *
+ *
+ *    Maintained by Tigerpanzer_02
+ */
+
 package at.tigerpanzer.ondeath.util;
 
 import org.bukkit.Bukkit;

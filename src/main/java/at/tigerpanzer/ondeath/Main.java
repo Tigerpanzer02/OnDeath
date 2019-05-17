@@ -34,7 +34,6 @@ public class Main extends JavaPlugin {
   private boolean placeholderAPI;
   private boolean mySQLEnabled;
   private boolean firstDeathEnabled;
-  private boolean usedbefore2;
   private String consolePrefix;
   public static MySQL mysql;
 

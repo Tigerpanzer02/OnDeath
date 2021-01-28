@@ -15,6 +15,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Sound;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -82,6 +83,9 @@ public class DeathRespawnListener implements Listener {
     String actionbar2;
     boolean DeathMessageTextOn;
     List<String> DeathMessageText;
+    if (e.getRespawnLocation().getWorld().getEnvironment() == World.Environment.THE_END) {
+      return;
+    }
     if (plugin.firstDeath() && Storage.getFirstDeath(p)) {
       Utils.debugmessage("Loading first death for" + p.getName());
       chatclearon = plugin.getConfig().getBoolean("FirstDeath.Death.ChatClearOn");

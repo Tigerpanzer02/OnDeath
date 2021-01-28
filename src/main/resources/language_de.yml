@@ -52,7 +52,7 @@ FirstDeath:
   Title:
     Title1: '&bCC&3SW'
     SubTitle1: '&eFirstDeath'
-    SubTitle2: '&aTitle&8 - &7Editerie es in der &8language.yml'
+    SubTitle2: '&aTitle&8 - &7Editiere es in der &8language.yml'
   #Welcome Message in the Chat
   DeathMessageTextOn:
     #You can add and remove as many lines as you like!
@@ -64,16 +64,16 @@ FirstDeath:
       - '&e|  '
       - '&e|  &bOnDeath &8- &7Your Death Plugin'
       - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
-      - '&e|  &7Your Network @CC-SW'
+      - '&e|  &7Your Network Plugily Projects'
       - '&e|  '
       - '&e------------------------------------'
   #Setze die erste TodesNachricht
   Death:
-    DeathMessage: '&7%player% has dieed the Server'
+    DeathMessage: '&7%player% has died the Server'
   #Nacricht in der Actionbar
   Actionbar:
     Actionbar1: '&7Tod - %player%!'
-    Actionbar2: '&7 CC-SW Network'
+    Actionbar2: '&7Plugily Projects'
 
 
 ########################
@@ -85,12 +85,12 @@ FirstDeath:
 Title:
   Title1: '&bCC&3SW'
   SubTitle1: '&bOnDeath'
-  SubTitle2: '&aTitle&8 - &7Editere es in der &8language.yml'
+  SubTitle2: '&aTitle&8 - &7Editiere es in der &8language.yml'
 
 
 #Nachrichtenliste beim Tod
 DeathMessageTextOn:
-  #Du kannst beliebig Zeieln hinzufügen oder entfernen
+  #Du kannst beliebig Zeilen hinzufügen oder entfernen
   DeathMessageText:
     - '&e------------------------------------'
     - '&e|  '
@@ -99,7 +99,7 @@ DeathMessageTextOn:
     - '&e|  '
     - '&e|  &bOnDeath &8- &7Dein Death Plugin'
     - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
-    - '&e|  &7Dein Netzwerk @CC-SW'
+    - '&e|  &7Dein Netzwerk Plugily Projects'
     - '&e|  '
     - '&e------------------------------------'
 
@@ -118,7 +118,7 @@ Death:
 #Nachrichten in der Actionbar
 Actionbar:
   Actionbar1: '&7Tod - %player%!'
-  Actionbar2: '&7 CC-SW Network'
+  Actionbar2: '&7Plugily Projects'
 
 #Nachrichten für Spielernachrichten
 SpawnLocation:

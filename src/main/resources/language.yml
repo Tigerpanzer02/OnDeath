@@ -64,7 +64,7 @@ FirstDeath:
       - '&e|  '
       - '&e|  &bOnDeath &8- &7Your Death Plugin'
       - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
-      - '&e|  &7Your Network @CC-SW'
+      - '&e|  &7Your Network Plugily Projects'
       - '&e|  '
       - '&e------------------------------------'
   #Set the death message
@@ -73,7 +73,7 @@ FirstDeath:
   #Message on the actionbar
   Actionbar:
     Actionbar1: '&7Death %player%!'
-    Actionbar2: '&7 CC-SW Network'
+    Actionbar2: '&7Plugily Projects'
 
 
 ########################
@@ -99,7 +99,7 @@ DeathMessageTextOn:
     - '&e|  '
     - '&e|  &bOnDeath &8- &7Your Death Plugin'
     - '&e|  &7Plugin by &bTigerpanzer_02/Tigerkatze'
-    - '&e|  &7Your Network @CC-SW'
+    - '&e|  &7Your Network Plugily Projects'
     - '&e|  '
     - '&e------------------------------------'
 
@@ -118,7 +118,7 @@ Death:
 #Message on the actionbar
 Actionbar:
   Actionbar1: '&7Welcome %player%!'
-  Actionbar2: '&7 CC-SW Network'
+  Actionbar2: '&7Plugily Projects'
 
 #Should Players that Death be teleported to a location
 SpawnLocation:

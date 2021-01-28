@@ -2,7 +2,7 @@
 # OnDeath
 SpigotMc OnDeath Plugin
 
-https://www.spigotmc.org/resources/XXXXX/
+https://www.spigotmc.org/resources/63773/
 
 # Sounds 
 https://www.spigotmc.org/wiki/cc-sounds-list/
